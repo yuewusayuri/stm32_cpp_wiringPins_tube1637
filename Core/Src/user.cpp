@@ -15,7 +15,7 @@ void hardware_init(void)
     led_init();
     led_set(LED_OFF);
     /* tm1637 */
-    tube.init(PA0, PA1); /* SCL, SDA 可以随意更改位置 */
+    tube.init(PA5, PA6); /* SCL, SDA 可以随意更改位置 */
     tube.clear();
 }
 

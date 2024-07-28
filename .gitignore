@@ -20,7 +20,7 @@
 JLinkLog.txt
 *.iex
 *.htm
-*.sct
+
 *.map
 *.Administrator
 *.uvopt

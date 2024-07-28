@@ -3,9 +3,13 @@
 
 #include "main.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+    
 typedef enum
 {
-    PA0,
+    PA0 ,
     PA1 ,
     PA2 ,
     PA3 ,
@@ -111,5 +115,9 @@ void pinMode(digitalPins_Type pins, uint32_t Mode);
 void digitalWrite(digitalPins_Type pins, digitalLevel_Type pinsLevel);
 void digitalToggle(digitalPins_Type pins);
 uint8_t digitalRead(digitalPins_Type pins);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

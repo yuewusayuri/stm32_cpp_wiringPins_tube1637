@@ -179,10 +179,10 @@ void TM1637::iic_stop()
 
 void TM1637::iic_send_byte(uint8_t byte)
 {
-    for (uint8_t i = 0; i < 8; i++) {   //先放最低位，左移i位
-        iic_w_sda((byte & (0x01 << i)) ? HIGH : LOW); //每放一位施行释放SCL拉低SCL
-        iic_w_scl(HIGH);                   //SCL以低位结束，方便拼接
-        iic_w_scl(LOW);
+    for (uint8_t i = 0; i < 8; i++) {
+        iic_w_sda((byte & (0x01 << i)) ? HIGH : LOW);   //先放最低位，左移i位
+        iic_w_scl(HIGH);                    //每放一位施行释放SCL拉低SCL
+        iic_w_scl(LOW);                   //SCL以低位结束，方便拼接
     }
 }
 
